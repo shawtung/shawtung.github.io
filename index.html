@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <ul id="list"></ul>
+  <script>
+    const songs = [
+      {
+        "url": "5cf64c2d509891034d6273cb.mp3",
+        "nm": "zmdqd"
+      },
+      {
+        "url": "5be28cc25098910fb224438a.mp4",
+        "nm": "magic.mp4"
+      },
+      {
+        "url": "5d5612c5509891032f479f64.mp3",
+        "nm": "guoge"
+      },
+      {
+        "url": "5d5612c4509891034f3cf2e4.mp3",
+        "nm": "duqing"
+      },
+      {
+        "url": "5d5612c4509891035e0f7d9c.mp3",
+        "nm": "luzaihefang"
+      },
+      {
+        "url": "5d5612c4509891034e5ecff1.mp3",
+        "nm": "songshixiong"
+      },
+      {
+        "url": "5d5612c450989103464589d6.mp3",
+        "nm": "mojianzi"
+      },
+      {
+        "url": "5d5612c5509891035824e495.mp3",
+        "nm": "ticao6"
+      },
+      {
+        "url": "5d5612c4509891035c6ba22f.mp3",
+        "nm": "xiaolaba"
+      },
+      {
+        "url": "5d5612c450989103417efdc9.mp3",
+        "nm": "maozhuxi"
+      },
+      {
+        "url": "5d7b612e5098910335444bcb.mp3",
+        "nm": "1984heimaojingzhang"
+      },
+      {
+        "url": "5d7b612e509891034b6940ff.mp3",
+        "nm": "1984xuhaifeng"
+      },
+      {
+        "url": "5d7b612f5098910355131966.mp3",
+        "nm": "1983nanwangjinxiao"
+      },
+      {
+        "url": "5d7b6132509891034e5ed0cb.mp3",
+        "nm": "wodezhongguoxin"
+      },
+      {
+        "url": "5d7b613150989103473adefa.mp3",
+        "nm": "shenzhouwuhao"
+      },
+      {
+        "url": "5d7b612e509891033f54330d.mp3",
+        "nm": "1981nvpaiduoguan"
+      },
+      {
+        "url": "5d7b61315098910344367172.mp3",
+        "nm": "guangyindegushi"
+      },
+      {
+        "url": "5d7b613050989103377c9096.mp3",
+        "nm": "gaige"
+      },
+      {
+        "url": "5d7b612d5098910342570c6f.mp3",
+        "nm": "1978xinwenlianbo"
+      },
+      {
+        "url": "5d7b6130509891035a66e539.mp3",
+        "nm": "gaokao"
+      },
+      {
+        "url": "5d7b612d50989103301b9a1c.mp3",
+        "nm": "1976zajiaoshuidao"
+      },
+      {
+        "url": "5d7df55a5098910343226a17.mp3",
+        "nm": "1970dongfanghong"
+      },
+      {
+        "url": "5d7b612c5098910348541313.mp3",
+        "nm": "yuanzidan"
+      },
+      {
+        "url": "5d7b612d509891032f47a02a.mp3",
+        "nm": "1963xueleifeng"
+      },
+      {
+        "url": "5d7b612d5098910343226a13.mp3",
+        "nm": "1959yundongyuanjinxingqu"
+      },
+      {
+        "url": "5d7b612d509891033129c6c2.mp3",
+        "nm": "1956xiaolaba"
+      },
+      {
+        "url": "5d7b612d509891034c0b6e61.mp3",
+        "nm": "1951guangboticao"
+      },
+      {
+        "url": "5d7b612d509891035c6ba2f7.mp3",
+        "nm": "yidaiyilu"
+      },
+      {
+        "url": "5d7b6130509891034d6274d2.mp3",
+        "nm": "woheni"
+      },
+      {
+        "url": "5d7b612f50989103577288b3.mp3",
+        "nm": "aoyun"
+      },
+      {
+        "url": "5d7b612f5098910346458ac2.mp3",
+        "nm": "shenaochenggong"
+      },
+      {
+        "url": "5d7fa2a95098910335444be7.mp3",
+        "nm": "changhuijia"
+      },
+      {
+        "url": "5d7b613050989103505e8d36.mp3",
+        "nm": "changhuijiakankan"
+      },
+      {
+        "url": "5d7f9dd3509891035476c238.mp3",
+        "nm": "hongqipiaopiao"
+      },
+      {
+        "url": "5d7f9dd3509891035674a36f.mp3",
+        "nm": "wohewodezuguo"
+      },
+      {
+        "url": "5d7b612f509891035824e57c.mp3",
+        "nm": "1999aomenhuigui"
+      },
+      {
+        "url": "5d7f98795098910335444be4.mp3",
+        "nm": "dongfangzhizhu"
+      },
+      {
+        "url": "5d7b6131509891034a0add8f.mp3",
+        "nm": "qianniandengyihui"
+      },
+      {
+        "url": "5d7b612e5098910334747280.mp3",
+        "nm": "yanzhouxiongfeng"
+      },
+      {
+        "url": "5d7f8b37509891033c6dc33e.mp3",
+        "nm": "houpijin"
+      },
+      {
+        "url": "5d7b613250989103417efece.mp3",
+        "nm": "wozaimalubian"
+      },
+      {
+        "url": "5d7b612f509891035b6ccca9.mp3",
+        "nm": "diushoujuan"
+      },
+      {
+        "url": "5d7b6131509891033969f8e9.mp3",
+        "nm": "shanghaitan"
+      },
+      {
+        "url": "5d7b6132509891033e6a2c2d.mp3",
+        "nm": "tiexuedanxin"
+      },
+      {
+        "url": "5d7b61315098910338369940.mp3",
+        "nm": "kunlonghao"
+      },
+      {
+        "url": "5d7b6130509891034f3cf3fc.mp3",
+        "nm": "fuxinghao"
+      },
+      {
+        "url": "5d7b612c509891035e0f7e39.mp3",
+        "nm": "xiongan"
+      },
+      {
+        "url": "5d7b61315098910349090ec7.mp3",
+        "nm": "tiangongerhao"
+      },
+      {
+        "url": "5d7b612d509891035159aa6a.mp3",
+        "nm": "xiaopingguo"
+      },
+      {
+        "url": "5d8a320a509891035476c292.mp3",
+        "nm": "jiusanyuebing"
+      },
+      {
+        "url": "5d8a320a509891032e4d7fbf.mp3",
+        "nm": "fengshouzhongguo"
+      },
+      {
+        "url": "5d8b4ff550989103377c911a.mp3",
+        "nm": "yazhouxiongfeng"
+      },
+      {
+        "url": "5d8b4ffc509891034541ca31.mp3",
+        "nm": "xiyouji"
+      },
+      {
+        "url": "5d8b4ffa509891033f54337f.mp3",
+        "nm": "tongyishouge"
+      },
+      {
+        "url": "5d8c168a50989103537b9f09.mp3",
+        "nm": "beijinghuanyingni"
+      },
+    ]
+    const prefix = 'https://h5.zhongguowangshi.com/campaigns/58e8a8ad97278378cf13844a/20190813021738/5d52558e5098910335444af3/'
+    const fragment = new DocumentFragment()
+
+    songs.forEach(({ url, nm }) => {
+      const li = document.createElement('li')
+      li.innerHTML =`
+<p>
+  <label>${nm}</label>
+  <br />
+  <audio src=${prefix + url} controls />
+</p>
+`
+      fragment.appendChild(li)
+    })
+
+    document.getElementById('list').appendChild(fragment)
+  </script>
+</body>
+
+</html>
